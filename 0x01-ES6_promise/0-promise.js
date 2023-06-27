@@ -1,17 +1,12 @@
 // 0-promise.js
-
-function getResponseFromAPI() {
+export function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    // Your API logic here
-    // For example, making an API request using fetch
-    fetch('https://api.example.com')
-      .then((response) => {
-        resolve(response); // Resolve the Promise with the API response
-      })
-      .catch((error) => {
-        reject(error); // Reject the Promise with the error
-      });
+    // Perform API request or any asynchronous operation here
+    
+    // If the operation is successful, resolve the promise
+    resolve(/* Your response data */);
+    
+    // If there's an error, reject the promise
+    // reject(new Error("Error message"));
   });
 }
-
-export { getResponseFromAPI };
