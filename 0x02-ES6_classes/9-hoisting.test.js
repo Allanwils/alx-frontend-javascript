@@ -1,4 +1,4 @@
-import { HolbertonClass, StudentHolberton, listOfStudents } from './9-hoisting.js';
+import { HolbertonClass, StudentHolberton, listOfStudents } from './9-hoisting';
 
 describe('HolbertonClass', () => {
   test('should create an instance with the correct year and location', () => {
