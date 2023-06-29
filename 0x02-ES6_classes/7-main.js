@@ -1,5 +1,5 @@
-import Airport from './7-airport';
+import Airport from "./7-airport.js";
 
-const airport = new Airport('San Francisco Airport', 'SFO');
-console.log(`${airport}`);
-console.log(`[object ${airport._code}]`);
+const airportSF = new Airport('San Francisco Airport', 'SFO');
+console.log(airportSF);
+console.log(airportSF.toString());

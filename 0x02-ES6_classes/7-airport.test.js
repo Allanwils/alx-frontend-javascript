@@ -1,8 +1,14 @@
-const Airport = require('./7-airport.js');
+import Airport from './7-airport.js';
 
 describe('Airport', () => {
-  it('should return the airport code as the default string description', () => {
-    const airport = new Airport('John F. Kennedy International Airport', 'JFK');
-    expect(`${airport}`).toBe('Airport [JFK] { _name: \'John F. Kennedy International Airport\', _code: \'JFK\' }');
+  test('should create an airport object with name and code', () => {
+    const airportSF = new Airport('San Francisco Airport', 'SFO');
+    expect(airportSF._name).toBe('San Francisco Airport');
+    expect(airportSF._code).toBe('SFO');
+  });
+
+  test('should return the airport code when converted to a string', () => {
+    const airportSF = new Airport('San Francisco Airport', 'SFO');
+    expect(airportSF.toString()).toBe('[object SFO]');
   });
 });
