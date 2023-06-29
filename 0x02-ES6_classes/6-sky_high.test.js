@@ -9,6 +9,6 @@ describe('SkyHighBuilding', () => {
 
   it('should override the evacuationWarningMessage method', () => {
     const building = new SkyHighBuilding(140, 60);
-    expect(building.evacuationWarningMessage()).toEqual('Evacuate slowly the 60 floors.');
+    expect(building.evacuationWarningMessage()).toEqual('Evacuate slowly the 60 floors');
   });
 });
