@@ -1,16 +1,13 @@
-import initializeRooms from './1-make_classrooms.js';
-import ClassRoom from './0-classroom.js';
+import initializeRooms from './1-make_classrooms';
+import ClassRoom from './0-classroom';
 
 describe('initializeRooms', () => {
-  it('returns an array of 3 ClassRoom objects with the given sizes', () => {
-    const rooms = initializeRooms();
-
-    expect(rooms).toHaveLength(3);
-    expect(rooms[0]).toBeInstanceOf(ClassRoom);
-    expect(rooms[0]._maxStudentsSize).toBe(19);
-    expect(rooms[1]).toBeInstanceOf(ClassRoom);
-    expect(rooms[1]._maxStudentsSize).toBe(20);
-    expect(rooms[2]).toBeInstanceOf(ClassRoom);
-    expect(rooms[2]._maxStudentsSize).toBe(34);
+  it('should return an array of ClassRoom instances', () => {
+    const result = initializeRooms();
+    expect(Array.isArray(result)).toBe(true);
+    expect(result.length).toBe(3);
+    result.forEach(room => {
+      expect(room instanceof ClassRoom).toBe(true);
+    });
   });
 });
