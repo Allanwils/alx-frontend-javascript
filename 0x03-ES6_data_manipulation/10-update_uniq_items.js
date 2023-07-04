@@ -8,5 +8,5 @@ function updateUniqueItems(map) {
       map.set(item, 100);
     }
   }
-};
+}
 export default updateUniqueItems;
