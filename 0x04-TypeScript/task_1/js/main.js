@@ -1,7 +1,8 @@
-var teacher = {
+var director1 = {
     firstName: 'John',
     lastName: 'Doe',
-    fullTimeEmployee: false,
-    location: 'London'
+    location: 'London',
+    fullTimeEmployee: true,
+    numberOfReports: 17
 };
-console.log(teacher);
+console.log(director1);
