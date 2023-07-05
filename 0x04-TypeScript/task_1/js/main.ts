@@ -31,4 +31,21 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstLetter}. ${formattedLastName}`;
 };
 
-console.log(printTeacher("John", "Doe")); 
+console.log(printTeacher('John', 'Doe'));
+
+class StudentClass {
+  constructor(private firstName: string, private lastName: string) {}
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+const student: StudentClass = new StudentClass('Alice', 'Smith');
+
+console.log(student.displayName()); // Output: Alice
+console.log(student.workOnHomework()); // Output: Currently working
